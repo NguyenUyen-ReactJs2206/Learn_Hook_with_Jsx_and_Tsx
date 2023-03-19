@@ -1,12 +1,12 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Counter from './useDispatch/dispatch1/Counter'
+import Welcome from './UseContext/Welcome'
+import Counter from './UseReducer/dispatch1/Counter'
 
 function App() {
   return (
     <div className='App'>
-      <Counter />
+      {/* <Counter /> */}
+      <Welcome />
     </div>
   )
 }

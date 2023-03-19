@@ -1,6 +1,8 @@
 import { useReducer } from 'react'
-import { decreaseAgeAction, increaseAgeAction, increaseXAgeAction } from '../reducer/actions'
-import reducer, { init, initialState, log } from '../reducer/reducer'
+import { decreaseAgeAction, increaseAgeAction, increaseXAgeAction } from './reducer/actions'
+import { init, initialState, log } from './reducer/reducer'
+// import { decreaseAgeAction, increaseAgeAction, increaseXAgeAction } from '../reducer/actions'
+// import reducer, { init, initialState, log } from '../reducer/reducer'
 
 export default function Counter() {
   //   const [state, setState] = useState<{ age: number }>({ age: 24 })
@@ -21,7 +23,7 @@ export default function Counter() {
     dispatch(increaseXAgeAction(value))
   }
   return (
-    <div>
+    <div className='mb-2'>
       <button onClick={increaseAge} style={{ color: 'red' }}>
         Increase Age
       </button>

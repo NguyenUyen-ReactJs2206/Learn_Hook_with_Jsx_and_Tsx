@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import Counter from './useDispatch/dispatch1/Counter'
+import Counter from './useReducer/dispatch1/Counter'
 
 function App() {
   return (

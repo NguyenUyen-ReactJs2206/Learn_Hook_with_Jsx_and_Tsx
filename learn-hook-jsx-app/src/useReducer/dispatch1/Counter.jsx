@@ -1,6 +1,6 @@
 import { useReducer } from 'react'
-import { decreaseAgeAction, increaseAgeAction, increaseXAgeAction } from '../reducer/actions'
-import reducer, { init, initialState, log } from '../reducer/reducer'
+import { decreaseAgeAction, increaseAgeAction, increaseXAgeAction } from './reducer/actions'
+import reducer, { init, initialState, log } from './reducer/reducer'
 
 export default function Counter() {
   //   const [state, setState] = useState<{ age: number }>({ age: 24 })
