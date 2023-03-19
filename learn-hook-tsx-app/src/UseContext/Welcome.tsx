@@ -8,7 +8,10 @@ export interface ThemeType {
   onChangeTheme: (color: 'light' | 'dark') => void
 }
 
-export const ThemeContext = createContext<ThemeType>({ theme: { color: 'light' }, onChangeTheme: () => {} })
+export const ThemeContext = createContext<ThemeType>({
+  theme: { color: 'light' },
+  onChangeTheme: () => {}
+})
 
 export default function Welcome() {
   const [theme, setTheme] = useState<ThemeType['theme']>({ color: 'light' })
