@@ -16,16 +16,17 @@ export const Input = forwardRef<{ type: () => void }>((props, ref) => {
     inputRef.current?.focus()
     let interval: any = setInterval(() => {
       setValue(initialString.slice(0, numberIndex))
-      if (numberIndex === initialString.length) {
+      if (numberIndex > initialString.length) {
         return clearInterval(interval)
       }
       numberIndex++
     }, 100)
   }
-
+  console.log(inputRef.current?.value)
   return (
     <div>
       <input type='text' placeholder='type something' ref={inputRef} onChange={() => {}} value={value} />
+      <p>{value}</p>
     </div>
   )
 })
