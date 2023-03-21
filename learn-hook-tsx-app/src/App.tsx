@@ -20,7 +20,8 @@ function App() {
       {/* <MainLayout>s
         <Manager />
       </MainLayout> */}
-      <MouseTracker render={(value) => <Ads {...value} />} />
+      {/* <MouseTracker render={(value) => <Ads {...value} />} /> */}
+      <Ads />
     </div>
   )
 }
