@@ -21,7 +21,7 @@ export default function MouseTracker({ render }: { render: (value: PositionType)
 }
 
 export function withMouseTracker<T>(Component: React.ComponentType<T & PositionType>) {
-  return function (props: any) {
+  return function (props: Omit<T, keyof PositionType>) {
     const [position, setPosition] = useState<PositionType>({ x: 0, y: 0 })
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       setPosition({
@@ -32,7 +32,7 @@ export function withMouseTracker<T>(Component: React.ComponentType<T & PositionT
     return (
       <div onMouseMove={handleMouseMove}>
         <p style={{ color: 'red' }}>Mouse Move</p>
-        <Component {...props} {...position} />
+        <Component {...(props as T)} {...position} />
       </div>
     )
   }

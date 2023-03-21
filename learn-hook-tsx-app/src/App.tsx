@@ -21,7 +21,7 @@ function App() {
         <Manager />
       </MainLayout> */}
       {/* <MouseTracker render={(value) => <Ads {...value} />} /> */}
-      <Ads />
+      <Ads visible />
     </div>
   )
 }
