@@ -1,4 +1,6 @@
 import './App.css'
+import Ads from './MouseTracker/cpn/Ads'
+import MouseTracker from './MouseTracker/MouseTracker'
 import Manager from './ReactPortal/cpn/Manager'
 import MainLayout from './ReactPortal/MainLayout'
 import DifferentWaysWelcome from './UseContext/DifferentWaysWelcome'
@@ -15,9 +17,10 @@ function App() {
       {/* <DifferentWaysWelcome /> */}
       {/* <AutoInput />
       <ProductList /> */}
-      <MainLayout>
+      {/* <MainLayout>s
         <Manager />
-      </MainLayout>
+      </MainLayout> */}
+      <MouseTracker render={(value) => <Ads {...value} />} />
     </div>
   )
 }
