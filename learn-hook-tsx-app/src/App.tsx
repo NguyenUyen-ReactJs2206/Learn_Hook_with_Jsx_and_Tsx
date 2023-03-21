@@ -1,4 +1,6 @@
 import './App.css'
+import Manager from './ReactPortal/cpn/Manager'
+import MainLayout from './ReactPortal/MainLayout'
 import DifferentWaysWelcome from './UseContext/DifferentWaysWelcome'
 import Welcome from './UseContext/Welcome'
 import ProductList from './UseDeferredValue/ProductList'
@@ -11,8 +13,11 @@ function App() {
       {/* <Counter /> */}
       {/* <Welcome /> */}
       {/* <DifferentWaysWelcome /> */}
-      <AutoInput />
-      <ProductList />
+      {/* <AutoInput />
+      <ProductList /> */}
+      <MainLayout>
+        <Manager />
+      </MainLayout>
     </div>
   )
 }
