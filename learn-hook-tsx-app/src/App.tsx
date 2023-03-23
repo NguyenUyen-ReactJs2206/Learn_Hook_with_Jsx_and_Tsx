@@ -3,6 +3,7 @@ import Ads from './MouseTracker/cpn/Ads'
 import MouseTracker from './MouseTracker/MouseTracker'
 import Manager from './ReactPortal/cpn/Manager'
 import MainLayout from './ReactPortal/MainLayout'
+import TodoList from './TodoList/components/TodoList/TodoList'
 import DifferentWaysWelcome from './UseContext/DifferentWaysWelcome'
 import Welcome from './UseContext/Welcome'
 import ProductList from './UseDeferredValue/ProductList'
@@ -21,7 +22,8 @@ function App() {
         <Manager />
       </MainLayout> */}
       {/* <MouseTracker render={(value) => <Ads {...value} />} /> */}
-      <Ads visible />
+      {/* <Ads visible /> */}
+      <TodoList />
     </div>
   )
 }
