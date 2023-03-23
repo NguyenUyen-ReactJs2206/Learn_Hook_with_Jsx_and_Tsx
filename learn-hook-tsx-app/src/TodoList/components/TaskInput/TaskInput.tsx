@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './taskInput.module.scss'
 import { Todo } from '../../@types/todo.type'
@@ -16,7 +16,14 @@ interface TaskInputProps extends ExtraInfoType {
 function TaskInput(props: TaskInputProps) {
   const { addTodo, currentTodo, editTodo, finishEditTodo, debug, log } = props
   const [name, setName] = useState<string>('')
-  const address = { street: '10 Tran Hung Dao' }
+  const address = useMemo(() => {
+    return {
+      street: '10 Tran Hung Dao'
+    }
+  }, [])
+  const handleClickTitle = useCallback((value: any) => {
+    console.log(value)
+  }, [])
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (currentTodo) {
@@ -39,7 +46,7 @@ function TaskInput(props: TaskInputProps) {
   }
   return (
     <div className='mb-2'>
-      <Title address={address} />
+      <Title address={address} handleClickTitle={handleClickTitle} />
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type='text'
